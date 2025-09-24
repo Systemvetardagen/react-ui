@@ -1,7 +1,15 @@
 {
-  "name": "ui",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@systemvetardagen/react-ui",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A reusable React UI component library for Systemvetardagen.",
+  "author": "Systemvetardagen Web Development and Design",
+  "license": "MIT",
+  "homepage": "https://github.com/Systemvetardagen/react-ui#readme",
+  "bugs": {
+    "url": "https://github.com/Systemvetardagen/react-ui/issues"
+  },
+  "keywords": ["react", "ui", "component", "library", "systemvetardagen"],
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
@@ -17,6 +25,7 @@
   "files": [
     "dist"
   ],
+  "repository": {},
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && npm run build:css",

@@ -1,0 +1,44 @@
+# new update workflow
+
+# git add .
+# git commit -m "Add new feature"
+
+# use these commands to bump versions, will update git tag aswell as the package.json tag
+# npm version patch -> bump 1.0.0 → 1.0.1
+# npm version minor -> bump 1.0.0 → 1.1.0
+# npm version major -> bump 1.0.0 → 2.0.0
+
+# this will trigger this workflow on github which publishes the npm package so no use of npm publish manually
+# git push origin main --tags
+
+name: Publish
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUSH_KEY }}
