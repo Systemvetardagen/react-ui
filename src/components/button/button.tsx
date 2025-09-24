@@ -1,10 +1,11 @@
 export interface ButtonProps {
   label?: string;
   size?: Size;
+  color?: string;
 }
 export type Size = "sm" | "md" | "lg" | "xl";
 
-export const Button = ({ label, size = "sm" }: ButtonProps) => {
+export const Button = ({ label, size = "sm", color = "lightblue" }: ButtonProps) => {
   let sizeClass = "";
   switch (size) {
     case "sm":
@@ -20,9 +21,11 @@ export const Button = ({ label, size = "sm" }: ButtonProps) => {
       sizeClass = "tw:px-8 tw:py-4 tw:text-xl";
       break;
   }
+
   return (
     <button
-      className={` tw:bg-blue-400 tw:rounded-full tw:px-4 tw:py-2 tw:text-white ${sizeClass}`}
+      style={{ backgroundColor: color }}
+      className={`tw:rounded-full tw:px-4 tw:py-2 tw:text-black ${sizeClass}`}
     >
       {label ? label : "Button"}
     </button>

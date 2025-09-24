@@ -14,6 +14,9 @@ const meta = {
       control: { type: "select" },
       options: ["sm", "md", "lg", "xl"],
     },
+    color: {
+      control: { type: "color" },
+    },
   },
 } satisfies Meta<typeof Button>;
 
