@@ -11,6 +11,11 @@
 # this will trigger this workflow on github which publishes the npm package so no use of npm publish manually
 # git push origin main --tags
 
+# you can also push multiple changes and then run 
+# npm version patch or minor or majo
+# git push origin vX.X.X
+# to start the publish to npm seperate from the push of commits, hope this makes sense
+
 name: Publish
 
 on:
