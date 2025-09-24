@@ -1,7 +1,7 @@
 {
   "name": "@systemvetardagen/react-ui",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A reusable React UI component library for Systemvetardagen.",
   "author": "Systemvetardagen Web Development and Design",
   "license": "MIT",
@@ -9,7 +9,13 @@
   "bugs": {
     "url": "https://github.com/Systemvetardagen/react-ui/issues"
   },
-  "keywords": ["react", "ui", "component", "library", "systemvetardagen"],
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "systemvetardagen"
+  ],
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
