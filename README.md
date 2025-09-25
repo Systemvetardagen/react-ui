@@ -8,7 +8,6 @@
 
 - Typescript
 - Tailwind CSS
-- Storybook
 - ESM and UMD builds
 
 ## Installation
