@@ -31,7 +31,6 @@
   "files": [
     "dist"
   ],
-  "repository": {},
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && npm run build:css",
@@ -42,7 +41,8 @@
   },
   "peerDependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -66,8 +66,5 @@
     "vite": "^7.1.7",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "react-router-dom": "^7.9.2"
   }
 }
